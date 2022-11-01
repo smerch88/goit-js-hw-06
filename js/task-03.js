@@ -13,7 +13,13 @@ const images = [
   },
 ];
 
-const gallery = newTechnologies
-  .map((technology) => `<li class="list-item new">${technology}</li>`)
+const galleryRef = document.querySelector(".gallery");
+
+const gallery = images
+  .map(
+    (image) =>
+      `<li class="gallery-image"><img src="${image.url}" alt="${image.alt}"></li>`
+  )
   .join("");
-ingredientsList.append(...content);
+
+galleryRef.insertAdjacentHTML("afterbegin", gallery);
