@@ -2,7 +2,7 @@ const validationRef = document.querySelector("#validation-input");
 const lengthRef = validationRef.dataset.length;
 
 validationRef.addEventListener("blur", () => {
-  if (validationRef.value.length >= lengthRef)
+  if (validationRef.value.length == lengthRef)
     return validationRef.classList.contains("invalid")
       ? validationRef.classList.replace("invalid", "valid")
       : validationRef.classList.add("valid");
